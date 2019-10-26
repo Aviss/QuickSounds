@@ -43,8 +43,8 @@ CONFIG = None
 def initConfig():
     global CONFIG
     CONFIG = {
-        MICROPHONE: None,
-        HEADPHONES: None,
+        PUBLIC_DEVICE: None,
+        PRIVATE_DEVICE: None,
         SOUND_PATH: None,
         RESOURCE_PATH: None,
         OVERLAY_MODE: "labels",
@@ -74,6 +74,13 @@ def updateConfig():
         configFile = open(CONFIG_FILE_VALUE, "r")
         for line in configFile:
             tokens = line.split()
+
+            if len(tokens) <= 0:
+                continue
+
+            if tokens[0].startswith("#"):
+                continue
+
             if tokens[0] in CONFIG and len(tokens) > 1:
                 CONFIG[tokens[0]] = ' '.join(tokens[1:])
 

@@ -1,6 +1,6 @@
 # Dynamic configuration names
-MICROPHONE = "microphone"
-HEADPHONES = "headphones"
+PUBLIC_DEVICE = "publicDevice"
+PRIVATE_DEVICE = "privateDevice"
 SOUND_PATH = "soundPath"
 RESOURCE_PATH = "resourcesPath"
 OVERLAY_MODE = "overlayMode"
@@ -22,8 +22,9 @@ RELOAD_KEY = "reloadKey"
 TOGGLE_ACTIVE_KEY = "toggleActiveKey"
 MODIFY_KEY = "modifyKey"
 HOTBAR_KEYS = "hotbarKeys"
+
 OVERLAY_STAY_DURATION = "overlayStayDuration"
 LONG_HOLD_TIME = "longHoldTime"
 
 # Size for thumbnail images will be matched by resizing the image
-SOUND_IMAGE_EDGE_LENGTH = "imageSize"
+SOUND_IMAGE_EDGE_LENGTH = "thumbnailSize"

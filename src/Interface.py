@@ -46,11 +46,11 @@ class Interface:
         return ss
     
     def playGlobal(self, sound):
-        for device in [config(HEADPHONES), config(MICROPHONE)]:
+        for device in [config(PRIVATE_DEVICE), config(PUBLIC_DEVICE)]:
             self.playOneShotSound(device, sound)
 
     def playNotification(self, sound):
-        self.playOneShotSound(config(HEADPHONES), sound)
+        self.playOneShotSound(config(PRIVATE_DEVICE), sound)
 
     def stopPlayback(self):
         for stream in self.outputStreams:
