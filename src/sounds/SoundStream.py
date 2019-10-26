@@ -45,7 +45,7 @@ class SoundStream:
             stop = min(start + frames, len(self.currentSoundData))
 
             # Fill outdata with empty data in case of sound ending early
-            outdata[:stop-start] = self.currentSoundData[start:stop]
+            outdata[:stop-start] = self.currentSoundData[start:stop] * 0.5
             if stop-start < frames:
                 outdata[stop-start:, :].fill(0)
                 self.currentSoundData = None
