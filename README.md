@@ -62,7 +62,7 @@ Here is an example:
 
 `37 crickets.wav`: Pressing `Alt gr + 3` and then `Alt gr + 7` will play this sound.
     
-### Customizability
+## Customization
 
 In the `cfg.ini` more options than just the sounds folder are available. For example, system sounds and the overlay can be changed.
 

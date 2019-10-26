@@ -20,6 +20,7 @@ CONFIG_FILE = "configFile"
 CANCEL_KEY = "cancelKey"
 RELOAD_KEY = "reloadKey"
 TOGGLE_ACTIVE_KEY = "toggleActiveKey"
+RUN_MACRO_KEY = "runMacroKey"
 MODIFY_KEY = "modifyKey"
 HOTBAR_KEYS = "hotbarKeys"
 
@@ -28,3 +29,5 @@ LONG_HOLD_TIME = "longHoldTime"
 
 # Size for thumbnail images will be matched by resizing the image
 SOUND_IMAGE_EDGE_LENGTH = "thumbnailSize"
+
+ADDITIONAL_MACRO = "additionalMacro"

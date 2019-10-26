@@ -61,10 +61,13 @@ def initConfig():
         CANCEL_KEY : "num lock",  # 541
         RELOAD_KEY : "scroll lock",  # 70
         TOGGLE_ACTIVE_KEY : "-",  # 74
+        RUN_MACRO_KEY : "+",
         OVERLAY_STAY_DURATION : 3,
         LONG_HOLD_TIME : 1,
 
-        SOUND_IMAGE_EDGE_LENGTH : 100
+        SOUND_IMAGE_EDGE_LENGTH : 100,
+
+        ADDITIONAL_MACRO : None
     }
 
 def updateConfig():

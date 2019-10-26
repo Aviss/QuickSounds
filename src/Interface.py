@@ -2,6 +2,7 @@ from threading import Timer
 import time
 import sys
 import keyboard as kb
+import subprocess
 
 from src.sounds.Overlay import Overlay
 from src.sounds.SoundStream import SoundStream
@@ -64,6 +65,9 @@ class Interface:
         else:
             self.playNotification(resolveSoundByName(DISABLE_SOUND))
 
+    def runMacro(self):
+        subprocess.run(config(ADDITIONAL_MACRO))
+
     def shutDown(self):
         self.acceptHotkeys = False
         self.stopPlayback()
@@ -110,6 +114,9 @@ class Interface:
             elif kb.matches(e, config(TOGGLE_ACTIVE_KEY)) and self.modifierPressed:
                 self.toggleSoundboardActive()
                 
+            elif kb.matches(e, config(RUN_MACRO_KEY)) and self.modifierPressed:
+                self.runMacro()
+
             elif kb.matches(e, config(CANCEL_KEY)):
                 self.invalidateHotkey()
                 self.stopPlayback()
