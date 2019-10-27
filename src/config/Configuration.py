@@ -46,7 +46,7 @@ def initConfig():
         PUBLIC_DEVICE: None,
         PRIVATE_DEVICE: None,
         SOUND_PATH: None,
-        RESOURCE_PATH: None,
+        RESOURCE_PATH: "resources",
         OVERLAY_MODE: "labels",
 
         RELOAD_SOUND : "reload.wav",
@@ -113,8 +113,11 @@ def updateConfig():
 def config(configName):
     if configName in CONFIG:
         if configName == SOUND_PATH or configName == RESOURCE_PATH:
+            value = CONFIG[configName]
             # Can never have too many slashes in paths
-            return CONFIG[configName] + "/"
+            if value is not None:
+                value += "/"
+            return value
         return CONFIG[configName]
 
     if configName == HOTBAR_KEYS:

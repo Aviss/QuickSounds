@@ -11,8 +11,7 @@ a = Analysis(['QuickSounds.py'],
 			 ],
              datas=[
 				("resources", "resources"),
-				("cfg.ini", "."),
-				("README.txt", ".")
+				("cfg.ini", ".")
 			 ],
              hiddenimports=[],
              hookspath=[],
